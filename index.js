@@ -15,7 +15,9 @@ app.use(bodyParser.json())
 app.use(audit.create(console))
 
 app.use('/', function (req, res) {
-  res.send('success body:' + JSON.stringify(req.body));
+  const bodystr = JSON.stringify(req.body);
+  console.log('body:', bodystr);
+  res.send('success body:' + bodystr);
 });
 
 app.listen(port, () => console.log(`Request Logger app listening on port ${port}!`))
