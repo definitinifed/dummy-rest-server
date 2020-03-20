@@ -1,6 +1,9 @@
 const express = require('express')
 const audit = require('express-request-logger')
 const bodyParser = require('body-parser')
+const swagger = require('./swagger-integration');
+const appointment = require('./api/appointment');
+
 const port = process.env.PORT || 80;
 
 const app = express()
@@ -14,10 +17,7 @@ app.use(bodyParser.json())
 // audit
 app.use(audit.create(console))
 
-app.use('/', function (req, res) {
-  const bodystr = JSON.stringify(req.body);
-  console.log('body:', bodystr);
-  res.send('success body:' + bodystr);
-});
+app.use(appointment);
 
+swagger(app);
 app.listen(port, () => console.log(`Request Logger app listening on port ${port}!`))
