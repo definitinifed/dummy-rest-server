@@ -19,10 +19,13 @@ module.exports = router;
  *         type: string
  *       startTime:
  *         type: string
+ *         format: date-time
  *       endTime:
  *         type: string
+ *         format: date-time
  *       date:
  *         type: string
+ *         format: date
  */
 
 /**
@@ -48,6 +51,11 @@ router.get('/appointment', function(req, res){
  * /appointment/:id:
  *    get:
  *      description: This should return single appointment
+ *    responses:
+ *      200:
+ *        description: appointment object
+ *        schema:
+ *          $ref: '#/definitions/appointment'
  */
 router.get('/appointment/:id', function(req, res){
   res.send(appointment.findById(req.params.id));
@@ -82,7 +90,7 @@ router.post('/appointment', function(req, res){
  * @swagger
  * /appointment/:id:
  *    put:
- *      description: Inserts appointment. Not idempotent. It will stay for max 30min.
+ *      description: Upates appointment.Idempotent. It will stay for max 30min.
  *      produces:
  *        - application/json
  *      parameters:
@@ -90,7 +98,7 @@ router.post('/appointment', function(req, res){
  *          description: _id of appointment object. Should be an uuid.v1
  *          in: params
  *        - name: appointment
- *          description: appointment object, any _id field will be replaced by new id
+ *          description: appointment object
  *          in:  body
  *          required: true
  *          type: string
@@ -98,7 +106,7 @@ router.post('/appointment', function(req, res){
  *            $ref: '#/definitions/appointment'
  *      responses:
  *        200:
- *          description: saved appointment with _id included
+ *          description: saved appointment
  *          schema:
  *            $ref: '#/definitions/appointment'
  */
