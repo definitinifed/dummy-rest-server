@@ -42,7 +42,7 @@ module.exports = router;
  *            items:
  *              $ref: '#/definitions/appointment'
  */
-router.get('/appointment', function(req, res){
+router.get('/appointment', function (req, res) {
   res.send(appointment.findAll());
 });
 
@@ -57,7 +57,7 @@ router.get('/appointment', function(req, res){
  *        schema:
  *          $ref: '#/definitions/appointment'
  */
-router.get('/appointment/:id', function(req, res){
+router.get('/appointment/:id', function (req, res) {
   res.send(appointment.findById(req.params.id));
 });
 
@@ -82,7 +82,7 @@ router.get('/appointment/:id', function(req, res){
  *          schema:
  *            $ref: '#/definitions/appointment'
  */
-router.post('/appointment', function(req, res){
+router.post('/appointment', function (req, res) {
   res.send(appointment.insert(req.body));
 });
 
@@ -110,6 +110,6 @@ router.post('/appointment', function(req, res){
  *          schema:
  *            $ref: '#/definitions/appointment'
  */
-router.patch('/appointment/:id', function(req, res){
+router.patch('/appointment/:id', function (req, res) {
   res.send(appointment.update(req.params.id, req.body));
 });
