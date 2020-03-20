@@ -7,14 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon"
   },
-  "keywords": ["dummy", "api", "rest"],
+  "keywords": [
+    "dummy",
+    "api",
+    "rest"
+  ],
   "author": "Fikret Buyukisik",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-request-logger": "0.0.3",
-    "global-request-logger": "^0.1.1",
     "morgan": "^1.9.1",
     "swagger-jsdoc": "^3.5.0",
     "swagger-ui-express": "^4.1.3",
