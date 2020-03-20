@@ -32,7 +32,7 @@ module.exports = router;
  * @swagger
  * /appointment:
  *    get:
- *      description: This should return all appointments
+ *      description: retrieves all appointments
  *      produces:
  *      responses:
  *        200:
@@ -50,7 +50,7 @@ router.get('/appointment', function(req, res){
  * @swagger
  * /appointment/:id:
  *    get:
- *      description: This should return single appointment
+ *      description: retrieves snigle appointment object with the _id as :id
  *    responses:
  *      200:
  *        description: appointment object
