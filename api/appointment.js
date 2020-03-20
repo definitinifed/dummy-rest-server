@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const appointment = require('../data')('appointment');
+const appointment = require('../repository/dummy-repository')('appointment');
 module.exports = router;
 
 

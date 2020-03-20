@@ -1,14 +1,15 @@
 {
-  "name": "basic-node-log-server",
+  "name": "dummy-rest-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "a dummy rest server with an in-memory db and api docs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": ["dummy", "api", "rest"],
+  "author": "Fikret Buyukisik",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
