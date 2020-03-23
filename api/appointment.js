@@ -22,9 +22,9 @@ module.exports = router;
  *       endTime:
  *         type: string
  *         format: date-time
- *      phoneOne:
+ *       phoneOne:
  *         type: string
- *      phoneTwo:
+ *       phoneTwo:
  *         type: string
  */
 
