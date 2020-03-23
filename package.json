@@ -1,6 +1,6 @@
 {
   "name": "dummy-rest-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a dummy rest server with an in-memory db and api docs.",
   "main": "index.js",
   "scripts": {
