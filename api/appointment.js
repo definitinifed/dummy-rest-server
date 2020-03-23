@@ -26,6 +26,10 @@ module.exports = router;
  *         type: string
  *       phoneTwo:
  *         type: string
+ *       notificationOne:
+ *         type: boolean
+ *       notificationTwo:
+ *         type: boolean
  */
 
 /**
