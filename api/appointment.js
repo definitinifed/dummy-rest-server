@@ -11,7 +11,6 @@ module.exports = router;
  *   appointment:
  *     type: object
  *     required:
- *       - date
  *       - startTime
  *       - endTime
  *     properties:
@@ -23,9 +22,10 @@ module.exports = router;
  *       endTime:
  *         type: string
  *         format: date-time
- *       date:
+ *      phoneOne:
  *         type: string
- *         format: date
+ *      phoneTwo:
+ *         type: string
  */
 
 /**
