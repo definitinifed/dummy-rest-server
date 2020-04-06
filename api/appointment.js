@@ -93,7 +93,7 @@ router.post('/appointment', function (req, res) {
 /**
  * @swagger
  * /appointment/:id:
- *    put:
+ *    patch:
  *      description: Upates appointment.Idempotent. It will stay for max 30min.
  *      produces:
  *        - application/json
